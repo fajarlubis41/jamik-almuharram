@@ -7,7 +7,7 @@
   <meta name="description" content="Website resmi Mesjid Jamik Al Muharram. Informasi jadwal shalat, agenda kajian, transparansi keuangan, dan donasi." />
   <title>Mesjid Jamik Al Muharram | Website Resmi</title>
 
-  
+  <!-- Tailwind CSS CDN: praktis untuk website statis GitHub Pages -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,9 +23,9 @@
       }
     };
   </script>
-  
+  <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -47,7 +47,7 @@
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased">
-  
+  <!-- NAVBAR -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-emerald-950/95 text-white backdrop-blur">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Navigasi utama">
       <a href="#beranda" class="flex items-center gap-3">
@@ -62,6 +62,7 @@
         <a class="nav-link text-sm font-medium" href="#beranda">Beranda</a>
         <a class="nav-link text-sm font-medium" href="#jadwal">Jadwal Shalat</a>
         <a class="nav-link text-sm font-medium" href="#agenda">Agenda</a>
+        <a class="nav-link text-sm font-medium" href="#artikel">Artikel</a>
         <a class="nav-link text-sm font-medium" href="#keuangan">Keuangan</a>
         <a class="nav-link text-sm font-medium" href="#donasi">Donasi</a>
       </div>
@@ -73,6 +74,7 @@
         <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#beranda">Beranda</a>
         <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#jadwal">Jadwal Shalat</a>
         <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#agenda">Agenda</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#artikel">Artikel</a>
         <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#keuangan">Keuangan</a>
         <a class="rounded-lg px-3 py-2 hover:bg-white/10" href="#donasi">Donasi / Infaq</a>
         <a class="mt-2 rounded-lg bg-gold-500 px-3 py-2.5 text-center font-bold text-emerald-950" href="#donasi">Infaq Sekarang</a>
@@ -81,7 +83,7 @@
   </header>
 
   <main>
-    
+    <!-- HERO -->
     <section id="beranda" class="hero-bg relative overflow-hidden text-white">
       <div class="mx-auto grid min-h-[590px] max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:px-8">
         <div class="max-w-2xl">
@@ -105,7 +107,7 @@
       </div>
     </section>
 
-    
+    <!-- JADWAL SHALAT -->
     <section id="jadwal" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="mb-8 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
         <div><p class="text-sm font-bold uppercase tracking-widest text-emerald-700">Ibadah Harian</p><h2 class="mt-2 text-3xl font-extrabold text-slate-900">Jadwal Shalat</h2><p class="mt-2 text-slate-500">Jadwal harian untuk wilayah Percut Sei Tuan, Deli Serdang.</p></div>
@@ -119,10 +121,10 @@
         <div class="prayer-card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" data-prayer="Maghrib"><p class="text-sm font-medium text-slate-500">Maghrib</p><p id="time-Maghrib" class="mt-3 text-2xl font-extrabold text-slate-900">18:25</p><i class="fa-solid fa-sunset mt-3 text-emerald-700"></i></div>
         <div class="prayer-card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" data-prayer="Isha"><p class="text-sm font-medium text-slate-500">Isya</p><p id="time-Isha" class="mt-3 text-2xl font-extrabold text-slate-900">19:35</p><i class="fa-solid fa-moon mt-3 text-emerald-700"></i></div>
       </div>
-      
+      <p class="mt-4 text-xs text-slate-500">*Waktu awal di atas adalah fallback contoh. Silakan cocokkan dengan jadwal resmi setempat.</p>
     </section>
 
-    
+    <!-- AGENDA + KEUANGAN -->
     <section class="bg-white py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-10"><p class="text-sm font-bold uppercase tracking-widest text-emerald-700">Kabar & Amanah</p><h2 class="mt-2 text-3xl font-extrabold text-slate-900">Agenda dan Transparansi</h2></div>
@@ -132,6 +134,7 @@
             <div id="agendaList" class="mt-6 space-y-4">
               <article class="rounded-2xl bg-white p-5 shadow-sm"><div class="flex gap-4"><div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-emerald-100 text-emerald-800"><i class="fa-solid fa-book-open"></i></div><div><h4 class="font-bold text-slate-900">Kajian Islam & Akhlak</h4><p class="mt-1 text-sm text-slate-500">Ustadz / Narasumber: Menyesuaikan agenda</p><p class="mt-2 text-sm font-semibold text-emerald-700"><i class="fa-regular fa-clock mr-1"></i>Jadwal diumumkan takmir</p></div></div></article>
             </div>
+            <p id="agendaNote" class="mt-4 text-xs text-slate-500">Agenda dapat diperbarui oleh takmir melalui Google Sheets.</p>
           </section>
 
           <section id="keuangan" class="rounded-3xl bg-emerald-950 p-6 text-white shadow-soft sm:p-8">
@@ -148,7 +151,22 @@
       </div>
     </section>
 
-    
+
+    <!-- ARTIKEL TERBARU -->
+    <section id="artikel" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div><p class="text-sm font-bold uppercase tracking-widest text-emerald-700">Informasi & Inspirasi</p><h2 class="mt-2 text-3xl font-extrabold text-slate-900">Artikel Terbaru</h2><p class="mt-2 text-slate-600">Berita, pengumuman, dan tulisan islami dari masjid.</p></div>
+        <span class="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-800"><i class="fa-regular fa-newspaper mr-2"></i>Wawasan Masjid</span>
+        </div>
+        <div id="articleList" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 text-sm text-slate-500">Artikel akan tampil setelah tab Artikel Google Sheets dihubungkan.</div>
+        </div>
+        <p id="articleStatus" class="mt-5 text-xs text-slate-500">Artikel dikelola oleh takmir melalui Google Sheets.</p>
+      </div>
+    </section>
+
+    <!-- DONASI -->
     <section id="donasi" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-900 to-emerald-700 text-white shadow-soft">
         <div class="grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.2fr_.8fr] lg:p-12">
@@ -167,12 +185,12 @@
     </section>
   </main>
 
-  
+  <!-- FOOTER -->
   <footer class="bg-slate-950 text-slate-300">
     <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_1fr_1fr] lg:px-8">
       <div><div class="flex items-center gap-3 text-white"><span class="grid h-10 w-10 place-items-center rounded-xl bg-gold-500 text-emerald-950"><i class="fa-solid fa-mosque"></i></span><span class="font-extrabold">Mesjid Jamik Al Muharram</span></div><p class="mt-4 max-w-sm text-sm leading-6">Pusat ibadah, silaturahmi, dan kegiatan umat. Semoga Allah memberkahi setiap langkah kebaikan kita.</p><div class="mt-5 flex gap-3"><a href="#" aria-label="YouTube masjid" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 hover:bg-emerald-700"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Instagram masjid" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 hover:bg-emerald-700"><i class="fa-brands fa-instagram"></i></a></div></div>
-      <div><h3 class="font-bold text-white">Alamat & Kontak</h3><p class="mt-4 flex gap-3 text-sm leading-6"><i class="fa-solid fa-location-dot mt-1 text-amber-400"></i><span>Jl. Moh. Yakub Lubis, Tembung, Kec. Percut Sei Tuan, Kabupaten Deli Serdang, Sumatera Utara 20371</span></p><p class="mt-3 flex gap-3 text-sm"><i class="fa-brands fa-whatsapp text-emerald-400"></i><a href="https://wa.me/6281376344243" target="_blank" rel="noopener" class="hover:text-white">WhatsApp Takmir: 0813-7634-4243</a></p></div>
-      <div><h3 class="font-bold text-white">Lokasi Masjid</h3><div class="mt-4 overflow-hidden rounded-xl border border-white/10"><iframe title="Peta lokasi Mesjid Jamik Al Muharram" src="https://www.google.com/maps?q=Mesjid%20Jamik%20Al%20Muharram%20Percut%20Sei%20Tuan&output=embed" width="100%" height="190" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="mt-3 inline-block text-sm text-emerald-300 hover:text-amber-300" href="https://share.google/Tf0fDjxzwTsxEoKzw" target="_blank" rel="noopener">Buka Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a></div>
+      <div><h3 class="font-bold text-white">Alamat & Kontak</h3><p class="mt-4 flex gap-3 text-sm leading-6"><i class="fa-solid fa-location-dot mt-1 text-amber-400"></i><span>Jl. M. Yakub Lubis, Medan / Kabupaten Deli Serdang, Sumatera Utara 20371</span></p><p class="mt-3 flex gap-3 text-sm"><i class="fa-brands fa-whatsapp text-emerald-400"></i><a href="https://wa.me/6281376344243" target="_blank" rel="noopener" class="hover:text-white">WhatsApp Takmir: 0813-7634-4243</a></p></div>
+      <div><h3 class="font-bold text-white">Lokasi Masjid</h3><div class="mt-4 overflow-hidden rounded-xl border border-white/10"><iframe title="Peta lokasi Mesjid Jamik Al Muharram" src="https://www.google.com/maps?q=Jl.%20M.%20Yakub%20Lubis%2C%20Medan%2C%20Kabupaten%20Deli%20Serdang%2C%20Sumatera%20Utara%2020371&output=embed" width="100%" height="190" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="mt-3 inline-block text-sm text-emerald-300 hover:text-amber-300" href="https://share.google/Tf0fDjxzwTsxEoKzw" target="_blank" rel="noopener">Buka Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a></div>
     </div>
     <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-slate-500">© <span id="year"></span> Mesjid Jamik Al Muharram. Website resmi masjid.</div>
   </footer>
@@ -190,7 +208,8 @@
       publishedId: "2PACX-1vTvdjFJZs8uAatVRy_0uh5cn27bWcCXu-9KGyg0s1PfX2x7YngnC54z8EhFsUjbxz1-12Au8ZjAAifd",
       // GID tab Agenda dan Keuangan. GID terlihat pada URL saat tab dibuka.
       agendaGid: "0",
-      financeGid: "466274939"
+      financeGid: "466274939",
+      articleGid: "138212949"
     };
 
     // ==================== NAVBAR MOBILE ====================
@@ -295,19 +314,21 @@
       3. Buat tab bernama "Agenda" dengan header baris pertama:
          Judul | Ustadz | Tanggal | Jam | Lokasi | Deskripsi
          Contoh tanggal: 2026-11-10; jam: 19:30. Satu agenda per baris.
-      4. Buat tab bernama "Keuangan" dengan header:
+      4. Buat tab bernama "Artikel" dengan header: Judul | Tanggal | Ringkasan | Gambar | URL | Status.
+         Gambar berupa URL gambar publik; URL berupa tautan halaman artikel lengkap. Status Draft untuk menyembunyikan artikel.
+      5. Buat tab bernama "Keuangan" dengan header:
          Tanggal | Jenis | Nominal | Keterangan
          Jenis harus "Pemasukan" atau "Pengeluaran". Nominal berupa angka tanpa Rp/titik pemisah.
-      5. Publikasi spreadsheet berarti data bisa dibaca publik. Jangan simpan data pribadi,
+      6. Publikasi spreadsheet berarti data bisa dibaca publik. Jangan simpan data pribadi,
          nomor rekening sensitif, atau informasi internal di sheet yang dipublikasikan.
-      6. Website memakai CSV publik: /d/e/PUBLISHED_ID/pub?gid=GID&single=true&output=csv.
+      7. Website memakai CSV publik: /d/e/PUBLISHED_ID/pub?gid=GID&single=true&output=csv.
       ID publik dan GID tab sudah dimasukkan pada CONFIG di atas. Google Sheets yang dipublikasikan
       dapat dibaca browser tanpa server/proxy; jangan publikasikan data rahasia.
     */
     // Ambil CSV dari URL publik. Ini menggunakan ID publik /d/e/.../pub,
     // bukan ID edit spreadsheet /d/.../edit.
     function publishedCsvUrl(sheetName) {
-      const gid = sheetName === "Agenda" ? CONFIG.agendaGid : CONFIG.financeGid;
+      const gid = sheetName === "Agenda" ? CONFIG.agendaGid : sheetName === "Keuangan" ? CONFIG.financeGid : CONFIG.articleGid;
       return `https://docs.google.com/spreadsheets/d/e/${CONFIG.publishedId}/pub?gid=${gid}&single=true&output=csv`;
     }
 
@@ -367,7 +388,7 @@
         const rows = await fetchSheet("Agenda");
         const today = new Date().toISOString().slice(0, 10);
         const upcoming = rows.filter(row => !row.Tanggal || String(row.Tanggal).slice(0,10) >= today);
-        // Agenda rutin tetap ditampilkan setiap pekan tanpa perlu input tanggal berulang.
+        // Agenda rutin tetap ditampilkan setiap pekan, walau tidak ada agenda tambahan di Sheets.
         const routineAgenda = `
           <article class="rounded-2xl border border-amber-200 bg-emerald-50 p-5 shadow-sm">
             <div class="flex gap-4">
@@ -381,7 +402,11 @@
               </div>
             </div>
           </article>`;
-        list.innerHTML = routineAgenda + (upcoming.length ? upcoming.slice(0, 5).map(row => `
+        if (!upcoming.length) {
+          list.innerHTML = routineAgenda;
+          return;
+        }
+        list.innerHTML = routineAgenda + upcoming.slice(0, 5).map(row => `
           <article class="rounded-2xl bg-white p-5 shadow-sm">
             <div class="flex gap-4">
               <div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-emerald-100 text-emerald-800"><i class="fa-solid fa-book-open"></i></div>
@@ -393,11 +418,28 @@
                 ${row.Deskripsi ? `<p class="mt-2 text-sm leading-6 text-slate-600">${escapeHTML(row.Deskripsi)}</p>` : ""}
               </div>
             </div>
-          </article>`).join("") : "");
+          </article>`).join("");
       } catch (error) {
         console.warn("Agenda Google Sheets belum tersedia:", error);
         document.getElementById("agendaNote").textContent = "Agenda contoh tampil. Hubungkan Google Sheets untuk pembaruan otomatis.";
       }
+    }
+
+
+    async function loadArticles() {
+      const list = document.getElementById("articleList");
+      const status = document.getElementById("articleStatus");
+      if (!CONFIG.articleGid) { status.textContent = "CMS Artikel belum dihubungkan. Buat tab Artikel di Google Sheets, publikasikan, lalu isi articleGid."; return; }
+      try {
+        const rows = await fetchSheet("Artikel");
+        const published = rows.filter(row => String(row.Status || "Terbit").toLowerCase() !== "draft" && row.Judul && row.URL);
+        if (!published.length) { list.innerHTML = '<p class="col-span-full rounded-2xl bg-white p-6 text-slate-500">Belum ada artikel yang diterbitkan.</p>'; status.textContent = "Artikel akan tampil otomatis setelah takmir mengisi tab Artikel."; return; }
+        list.innerHTML = published.slice().reverse().slice(0,6).map(row => {
+          const image = row.Gambar ? `<img src="${escapeHTML(row.Gambar)}" alt="${escapeHTML(row.Judul)}" class="h-48 w-full object-cover" loading="lazy">` : `<div class="grid h-48 place-items-center bg-emerald-100 text-emerald-800"><i class="fa-solid fa-book-open text-4xl"></i></div>`;
+          return `<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft">${image}<div class="p-5"><p class="text-xs font-semibold text-emerald-700">${escapeHTML(row.Tanggal || "")}</p><h3 class="mt-2 text-lg font-extrabold leading-snug text-slate-900">${escapeHTML(row.Judul)}</h3><p class="mt-2 line-clamp-3 text-sm leading-6 text-slate-600">${escapeHTML(row.Ringkasan || "Baca artikel dan informasi selengkapnya.")}</p><a href="${escapeHTML(row.URL)}" target="_blank" rel="noopener" class="mt-4 inline-flex items-center font-bold text-emerald-700 hover:text-emerald-900">Baca selengkapnya <i class="fa-solid fa-arrow-right ml-2"></i></a></div></article>`;
+        }).join("");
+        status.textContent = "Artikel terbaru dimuat dari Google Sheets.";
+      } catch (error) { console.warn("Artikel Google Sheets belum tersedia:", error); status.textContent = "Artikel gagal dimuat. Periksa publikasi tab Artikel."; }
     }
 
     async function loadFinance() {
@@ -417,7 +459,7 @@
         document.getElementById("cashIncome").textContent = formatRupiah(income);
         document.getElementById("cashExpense").textContent = formatRupiah(expense);
         document.getElementById("cashBalance").textContent = formatRupiah(income - expense);
-        document.getElementById("financeUpdated").textContent = `Data ${month} • `;
+        document.getElementById("financeUpdated").textContent = `Data bulan ${month} • diperbarui otomatis dari Google Sheets`;
       } catch (error) {
         console.warn("Keuangan Google Sheets belum tersedia:", error);
         document.getElementById("financeUpdated").textContent = "Data keuangan gagal dimuat. Periksa publikasi tab Keuangan dan koneksi internet.";
@@ -440,6 +482,7 @@
     loadPrayerTimes();
     loadAgenda();
     loadFinance();
+    loadArticles();
     // Refresh jadwal setiap 30 menit agar tetap relevan.
     setInterval(loadPrayerTimes, 30 * 60 * 1000);
   </script>
