@@ -239,9 +239,15 @@
       }).format(now);
       // Kalender Hijriah dari Intl (tersedia di browser modern). Jika tidak, tampilkan fallback.
       try {
-        document.getElementById("hijriDate").textContent = new Intl.DateTimeFormat("id-ID-u-ca-islamic-umalqura", {
-          timeZone: "Asia/Jakarta", day: "numeric", month: "long", year: "numeric"
-        }).format(now);
+        const hijriFormatter = new Intl.DateTimeFormat("id-ID-u-ca-islamic-umalqura", {
+          timeZone: "Asia/Jakarta",
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+        
+        document.getElementById("hijriDate").textContent =
+          hijriFormatter.format(now);
       } catch (_) {
         document.getElementById("hijriDate").textContent = "Kalender Hijriah";
       }
