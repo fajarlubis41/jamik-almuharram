@@ -246,8 +246,14 @@
           year: "numeric"
         });
         
+        const hijriParts = hijriFormatter.formatToParts(now);
+
+        const hijriDay = hijriParts.find(p => p.type === "day")?.value;
+        const hijriMonth = hijriParts.find(p => p.type === "month")?.value;
+        const hijriYear = hijriParts.find(p => p.type === "year")?.value;
+        
         document.getElementById("hijriDate").textContent =
-          hijriFormatter.format(now);
+          `${hijriDay} ${hijriMonth} ${hijriYear} H`;
       } catch (_) {
         document.getElementById("hijriDate").textContent = "Kalender Hijriah";
       }
